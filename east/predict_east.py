@@ -154,29 +154,29 @@ def predict_quad(model, img, pixel_threshold=cfg.pixel_threshold, quiet=False, i
     img = image.img_to_array(img)
 
     # fixme 文字叠加时 使用了简单的颜色进行分离 不需要可省略
-    img_red = deal_image_red(img, d_height, d_wight)
-    img_blk = deal_image_black(img, d_height, d_wight)
-    img_wht = deal_image_wht(img, d_height, d_wight)
+    # img_red = deal_image_red(img, d_height, d_wight)
+    # img_blk = deal_image_black(img, d_height, d_wight)
+    # img_wht = deal_image_wht(img, d_height, d_wight)
 
     # fixme 预处理后保存图像
-    num_img = 4
+    num_img = 1
     img_all = np.zeros((num_img, d_height, d_wight, 3))
     img_all[0] = img
-    img_all[1] = img_red
-    img_all[2] = img_blk
-    img_all[3] = img_wht
+    # img_all[1] = img_red
+    # img_all[2] = img_blk
+    # img_all[3] = img_wht
 
     img_ori = preprocess_input(img, mode='tf')  # suit tf tensor
-    img_red = preprocess_input(img_red, mode='tf')  # suit tf tensor
-    img_blk = preprocess_input(img_blk, mode='tf')  # suit tf tensor
-    img_wht = preprocess_input(img_wht, mode='tf')
+    # img_red = preprocess_input(img_red, mode='tf')  # suit tf tensor
+    # img_blk = preprocess_input(img_blk, mode='tf')  # suit tf tensor
+    # img_wht = preprocess_input(img_wht, mode='tf')
 
     # todo 图像预处理分成多张image批量处理
     x = np.zeros((num_img, d_height, d_wight, 3))
     x[0] = img_ori
-    x[1] = img_red
-    x[2] = img_blk
-    x[3] = img_wht
+    # x[1] = img_red
+    # x[2] = img_blk
+    # x[3] = img_wht
 
     # (sample, h, w, channels)
     y_pred = model.predict(x)
