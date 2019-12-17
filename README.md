@@ -27,6 +27,30 @@ NVIDIA Drivers/CUDA/cuDNN
 python predict.py
 ```
 
+- 当检测比较正的文本，且是书面文字（不是艺术字），准确率比较高，主要确保EAST模型框选文本正确，不要框选不全，涉及模型训练和超参数调试，具体看Training部分；
+
+![east_1](./asset/51_0_.jpg)
+
+
+
+![crnn_1](./asset/51_re.jpg)
+
+
+
+- 当检测存在角度的文本，确定文本四个顶点的坐标，旋转及边缘延伸，确保输入CRNN模型时文字完整性；
+
+![east_2](./asset/23_0_.jpg)
+
+
+
+![crnn_2](./asset/23_re.jpg)
+
+可以看到输入CRNN时裁剪下来的文字图片；
+
+![res](./asset/res.jpg)
+
+
+
 EAST模型检测文本框
 
 ```
