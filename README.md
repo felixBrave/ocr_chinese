@@ -70,17 +70,19 @@ python predict.py
 ### 代码结构
 
 ```shell
-- crnn										# 文字识别模型
-|-- predict_crnn.py 			# 预测文字，衔接east模型，裁剪及文字旋转
-|-- data									# 数据集预处理
-|-- net										# crnn网络实现及训练，char_std_5990.txt文字对应标签序
-|-- model									# 模型weights
-- east								  	# 文字检测模型
-｜-- predict_east.py  		 # 预测文字位置，画框 
-｜-- data								 # images数据集预处理
-｜-- net									 # east网络实现及训练，network/loss/training
-｜-- model								 # 模型weights
-- predict.py							# 实现end-to-end预测，模型衔接
+- crnn                    # 文字识别模型
+|-- predict_crnn.py       # 预测文字，衔接east模型，裁剪及文字旋转
+|-- data                  # 数据集预处理
+|-- net                   # crnn网络实现及训练，char_std_5990.txt文字对应标签序
+|-- model                 # 模型weights
+
+- east                    # 文字检测模型
+|-- predict_east.py       # 预测文字位置，画框 
+|-- data                  # images数据集预处理
+|-- net                   # east网络实现及训练，network/loss/training
+|-- model                 # 模型weights
+
+- predict.py              # 实现end-to-end预测，模型衔接
 ```
 
 ### Documents
