@@ -85,13 +85,27 @@ python predict.py
 - predict.py              # 实现end-to-end预测，模型衔接
 ```
 
+### Training
+* EAST
+
+  本项目数据集：[天池ICPR]( https://tianchi.aliyun.com/competition/entrance/231651/introduction ) MTWI 2018 挑战赛二网络图像的文本检测。淘宝上收集的商品图片，数据量充分，涵盖数十种字体，几个到几百像素字号，多种版式，较多干扰背景。（[百度云](https://pan.baidu.com/s/1S9WpyXZ_wVWbKo-WsB0q5A)/提取码：sxhh）
+
+  其他数据集：[MSRA-TD500]( http://www.iapr-tc11.org/mediawiki/index.php?title=MSRA_Text_Detection_500_Database_(MSRA-TD500) ) 自然场景下的文本检测数据集。
+
+* CRNN
+  本项目数据集：通用中文语料库，通过截取文本和随机生成，字体经过了大小、灰度、模糊、透视等变化，共360万张图片，图像分辨率w*h为280x32，涵盖了汉字、标点、英文、数字共5990个字符。（[百度云](https://pan.baidu.com/s/1JbsP0wGGsCzn3MwEbUHzMA)/提取码：4m2q）
+
+  其他数据集：
+
+  ​	1、Synthetic Data for Text Localisation 在复杂背景下人工合成的自然场景文本数据。英文[GitHub](https://github.com/ankush-me/SynthText)，中文[GitHub](https://github.com/wang-tf/Chinese_OCR_synthetic_data)。
+
+  ​	2、[A Large Chinese Text Dataset in the Wild]( https://ctwdataset.github.io/index.html ) 街景中文字符检测和识别的数据集，包括平面文本、凸起文本、光照不足的文本、远处文本、部分遮挡文本等。
+
+  本项目使用的数据集针对的是书面文字，所以在识别书面和打印文字上效果较好，如果要识别艺术字或手写体需要增加相应训练集。
+
 ### Documents
 
 Writing ......
-
-#### Training
-
-
 
 ### 参考
 
