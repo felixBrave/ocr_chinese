@@ -5,7 +5,7 @@ Keras实现自然场景下图像文字检测和识别，EAST/CRNN/CTC.
 
 - EAST模型实现文字检测，文字方向支持90° ~ -90°间任意角度，包含中字/英文/数字/符号等，目标检测的方式画框定位，返回文本框的四个坐标。
 - CRNN模型实现不定长文字识别，输出使用CTC算法模块。
-- TensorFlow自带CTC，算法原理可以参考我的博客[CTC算法在OCR文字识别上的应用]( https://felixbrave.github.io/ )，还有[其他博文]( https://xiaodu.io/ctc-explained/ )
+- TensorFlow自带CTC，算法原理可以参考我的博客[CTC算法在OCR文字识别上的应用]( https://felixbrave.github.io/2020/03/16/CTC/ )，还有[其他博文]( https://xiaodu.io/ctc-explained/ )
 
 
 
